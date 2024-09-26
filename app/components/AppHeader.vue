@@ -1,11 +1,11 @@
 <template>
 
-  <header class="header">
+  <header class="header" :class="{ sticky: scrollTop > windowHeight }">
     <div class="logo">羿熙科技</div>
-    <nav> 
+    <nav>
       <span v-for="(item, index) in menuList" :key="index" @click=scrollToTop(item.to)>
         {{ item.name }}
-      </span> 
+      </span>
     </nav>
     <div class="burger">
       <div class="burger-line1"></div>
@@ -25,10 +25,23 @@ const menuList = [
   { name: '公司动态', to: "company-activities" },
   { name: '联系我们', to: "contact-us" }
 ];
+const scrollTop = ref(0);
 
+const windowHeight = ref(0);
 const scrollToTop = (elm) => {
   let toElm = elm ? document.getElementById(elm) : 0;
   animateScrollTo(toElm)
 }
+const addSticky = () => {
+  scrollTop.value = document.documentElement.scrollTop || document.body.scrollTop;
+}
+onMounted(() => {
+  windowHeight.value = window.innerHeight;
+  window.addEventListener('scroll', addSticky);
+  addSticky();
+})
+onUnmounted(() => {
+  window.removeEventListener('scroll', addSticky);
+});
 </script>
 <style lang="less"></style>

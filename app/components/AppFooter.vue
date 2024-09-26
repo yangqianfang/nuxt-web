@@ -52,16 +52,31 @@
             alt=""><a href="https://beian.mps.gov.cn/#/query/webSearch?code=4405070XXXXXXX" target="_blank">粤公网安备
             4405070XXXXXXX</a></p>
       </div>
-      <p class="rights">© 2024 Livequeen有限公司官网 版权所有</p>
-      <div class="scrollToTop" style="display: block;">
-        <div @click="scrollToTop"><i class="iconfont fa-chevron-up"></i></div>
+      <p class="rights">© 2024 Livequeen有限公司官网 版权所有 {{ windowHeight }}{{ windowHeight }}</p>
+      
+      <div class="scrollToTop" v-if="scrollTop > windowHeight" style="display: block;">
+        <div @click="scrollToTop"><i class="iconfont icon-up"></i></div>
       </div>
     </div>
   </footer>
 </template>
 <script setup>
 import animateScrollTo from 'animated-scroll-to';
+
+const scrollTop = ref(0); 
+const windowHeight = ref(0);
 const scrollToTop = () => {
   animateScrollTo(0)
 }
+const addSticky = () => {
+  scrollTop.value = document.documentElement.scrollTop || document.body.scrollTop;
+}
+onMounted(() => {
+  windowHeight.value = window.innerHeight;
+  window.addEventListener('scroll', addSticky);
+  addSticky()
+})
+onUnmounted(() => {
+  window.removeEventListener('scroll', addSticky);
+});
 </script>
