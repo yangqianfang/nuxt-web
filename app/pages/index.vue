@@ -1,5 +1,5 @@
 <template>
-  <div class="swipe-box">
+  <div class="swipe-box" id="swipe-box">
     <div class="glide">
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides">
@@ -7,7 +7,7 @@
             <div class="slide-caption" :class="`text-${index}`">
               <h1 :class="`h1-${index} `">科技推动人类进步，研发引领实业发展。</h1>
               <h3 :class="`h3-${index}`">自力更生是中华民族自立于世界民族之林的奋斗基点，自主创新是我们攀登世界科技高峰的必由之路。</h3>
-              <button class="explore-btn" :class="`explorebt-${index}`">查看更多</button>
+              <button class="explore-btn" :class="`explorebt-${index}`" @click="readMord">查看更多</button>
             </div>
             <img class="img" :src="item.url" :alt="item.name">
           </li>
@@ -24,43 +24,38 @@
     </div>
   </div>
 
-  <div class="content-wrapper">
+  <div class="content-wrapper" >
     <!-- 关于我们 -->
-    <section id="about-us" class="about-us">
+    <section id="about-us" class="about-us" >
       <h2 class="title1">关于我们</h2>
       <p class="intro">网络公司不仅仅是提供域名注册、空间租用、网站开发、网站建设与网络营销活动策划相关的企业组织。</p>
       <div class="features">
-        <div class="feature"  >
+        <div class="feature"  data-aos="fade-up" data-aos-delay="0">
           <i class="iconfont icon-light"></i>
           <h4 class="feature-title">品牌创意</h4>
           <p class="feature-content">为企业设计独特的并能完美呈现企业价值观的视觉</p>
         </div>
-        <div class="feature" data-sr-id="3"
-          style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s ease-in-out 0.3s, transform 0.5s ease-in-out 0.3s;">
+        <div class="feature"   data-aos="fade-up" data-aos-delay="300"> 
           <i class="iconfont icon-chart-line"></i>
           <h4 class="feature-title">整合营销</h4>
           <p class="feature-content">通过市场进入分析、制定网络营销战略、网络营销实施</p>
         </div>
-        <div class="feature" data-sr-id="4"
-          style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s ease-in-out 0.3s, transform 0.5s ease-in-out 0.3s;">
+        <div class="feature" data-sr-id="4" data-aos="fade-up" data-aos-delay="600">
           <i class="iconfont icon-cart_fill_light"></i>
           <h4 class="feature-title">电子商务</h4>
           <p class="feature-content">根据企业需求，开设不同的销售渠道，通过网上直销</p>
         </div>
-        <div class="feature" data-sr-id="5"
-          style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s ease-in-out 0.3s, transform 0.5s ease-in-out 0.3s;">
+        <div class="feature" data-sr-id="5" data-aos="fade-up" data-aos-delay="900">
           <i class="iconfont icon-pc-f"></i>
           <h4 class="feature-title">网页设计</h4>
           <p class="feature-content">通过网站建设、智能建站、域名主机、企业邮箱</p>
         </div>
-        <div class="feature" data-sr-id="6"
-          style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s ease-in-out 0.3s, transform 0.5s ease-in-out 0.3s;">
+        <div class="feature" data-sr-id="6" data-aos="fade-up" data-aos-delay="1200">
           <i class="iconfont icon-yibiao"></i>
           <h4 class="feature-title">网站优化</h4>
           <p class="feature-content">网站推广是指将网站推广到国内各大知名网站和搜索引擎</p>
         </div>
-        <div class="feature" data-sr-id="7"
-          style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s ease-in-out 0.3s, transform 0.5s ease-in-out 0.3s;">
+        <div class="feature" data-sr-id="7" data-aos="fade-up" data-aos-delay="1500">
           <i class="iconfont icon-website"></i>
           <h4 class="feature-title">网站架设</h4>
           <p class="feature-content">通过绑定域名和服务器，把网站展现给全世界</p>
@@ -216,15 +211,14 @@
     <!-- 公司动态 -->
   </div>
 </template>
-<script setup>
-import "animate.css"
+<script setup> 
+import "animate.css"  
+import animateScrollTo from 'animated-scroll-to';
 import Glide from '@glidejs/glide'
 import { animateCSS, delay } from '~/utils'
 import banner01 from '~/assets/images/01.jpg'
 import banner02 from '~/assets/images/02.jpg'
-onMounted(() => {
-
-  console.log('组件已挂载');
+onMounted(() => { 
   var glide = new Glide('.glide').mount();
   activeClass(0);
   glide.on(['run.before'], function (e) {
@@ -235,7 +229,7 @@ onMounted(() => {
     let { index } = glide;
     console.log("after-", index)
     activeClass(index);
-  })
+  }) 
 });
 
 const removeClass = (index) => {
@@ -260,6 +254,10 @@ async function activeClass(index) {
   document.querySelector(bt).style.opacity = 1;
 }
 
+// 查看更多
+function readMord(){
+  animateScrollTo(document.getElementById('about-us'))
+}
 
 const bannerList = reactive([
   { id: 0, url: banner01, name: '活动1' },

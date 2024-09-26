@@ -8,11 +8,16 @@ export default defineNuxtConfig({
     '~/assets/index.css', 
     '@glidejs/glide/dist/css/glide.core.min.css', 
     '@glidejs/glide/dist/css/glide.theme.min.css'],
-  plugins: [],
+  plugins: ['~/plugins/aos.client.js'],
   compatibilityDate: '2024-04-03',
   devtools: { enabled: false },
   pages: true,
   srcDir: 'app',
   // postcss:postcssConfig,
-  modules: ['@nuxt/image']
+  modules: ['@nuxt/image',"nuxt-aos"],
+  router: {
+    options: {
+      scrollBehaviorType: 'smooth'
+    }
+  }
 })
