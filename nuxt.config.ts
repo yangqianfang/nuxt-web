@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
-import postcssConfig from "./postcss.config"
+// import postcssConfig from "./postcss.config"
 
 export default defineNuxtConfig({
   css: [
@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   pages: true,
   srcDir: 'app',
   // postcss:postcssConfig,
-  modules: ['@nuxt/image',"nuxt-aos"],
+  modules: ['@nuxt/image','nuxt-aos'],
   router: {
     options: {
       scrollBehaviorType: 'smooth'

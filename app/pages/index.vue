@@ -304,4 +304,7 @@ const bannerList = reactive([
 
 ]); 
 </script>
-<style lang="less"></style>
+<style lang="less">
+ .glide__arrow--left{left: 0;}
+ .glide__arrow--right{right: 0;}
+</style>
