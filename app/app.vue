@@ -1,9 +1,7 @@
 <template>
-   
-    <AppHeader />  
-    <NuxtPage />
-    <AppFooter />
-  
+  <AppHeader />
+  <NuxtPage />
+  <AppFooter />
 </template>
 <style lang="less">
 .item {

@@ -70,30 +70,25 @@
           data-filter=".web">Web</button><button class="filter-btn" data-filter=".mobile">移动</button><button
           class="filter-btn" data-filter=".backend">后端</button></div>
       <div class="cases" style="position: relative; height: 614.4px;">
-        <div class="case-item mobile backend"  ><img
-            src="/assets/images/case-1.jpg" alt=""></div>
-        <div class="case-item mobile web"  ><img
-            src="/assets/images/case-2.jpg" alt=""></div>
-        <div class="case-item mobile web" ><img
-            src="/assets/images/case-3.jpg" alt=""></div>
-        <div class="case-item mobile backend"  >
+        <div class="case-item mobile backend"><img src="/assets/images/case-1.jpg" alt=""></div>
+        <div class="case-item mobile web"><img src="/assets/images/case-2.jpg" alt=""></div>
+        <div class="case-item mobile web"><img src="/assets/images/case-3.jpg" alt=""></div>
+        <div class="case-item mobile backend">
           <img src="/assets/images/case-4.jpg" alt="">
         </div>
-        <div class="case-item web mobile"  ><img
-            src="/assets/images/case-5.jpg" alt=""></div>
-        <div class="case-item web backend"  >
+        <div class="case-item web mobile"><img src="/assets/images/case-5.jpg" alt=""></div>
+        <div class="case-item web backend">
           <img src="/assets/images/case-6.jpg" alt="">
         </div>
-        <div class="case-item backend web"  >
+        <div class="case-item backend web">
           <img src="/assets/images/case-7.jpg" alt="">
         </div>
-        <div class="case-item backend mobile"  ><img
-            src="/assets/images/case-8.jpg" alt=""></div>
+        <div class="case-item backend mobile"><img src="/assets/images/case-8.jpg" alt=""></div>
       </div>
     </section>
     <!-- 成功案例 -->
     <!-- 服务流程 -->
-    <section id="service" class="service"  >
+    <section id="service" class="service">
       <h2 class="title1">服务流程</h2>
       <p class="intro">网络综合公司，提供包括网络基础服务(如域名、主机、邮箱)和网络增值服务(如网站建设和推广，网站优化)等业务</p>
       <div class="services">
@@ -305,6 +300,11 @@ const bannerList = reactive([
 ]); 
 </script>
 <style lang="less">
- .glide__arrow--left{left: 0;}
- .glide__arrow--right{right: 0;}
+.glide__arrow--left {
+  left: 0;
+}
+
+.glide__arrow--right {
+  right: 0;
+}
 </style>

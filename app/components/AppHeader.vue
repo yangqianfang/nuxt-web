@@ -1,6 +1,6 @@
 <template>
 
-  <header class="header" :class="{ sticky: scrollTop > windowHeight,open:isMobile }">
+  <header class="header" :class="{ sticky: scrollTop > windowHeight, open: isMobile }">
     <div class="logo">羿熙科技</div>
     <nav>
       <span v-for="(item, index) in menuList" :key="index" @click=scrollToTop(item.to)>
@@ -35,7 +35,7 @@ const scrollToTop = (elm) => {
 const addSticky = () => {
   scrollTop.value = document.documentElement.scrollTop || document.body.scrollTop;
 }
-const  toggleMobile = ()=>{
+const toggleMobile = () => {
   isMobile.value = !isMobile.value
 }
 onMounted(() => {

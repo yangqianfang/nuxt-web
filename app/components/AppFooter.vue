@@ -52,8 +52,8 @@
             alt=""><a href="https://beian.mps.gov.cn/#/query/webSearch?code=4405070XXXXXXX" target="_blank">粤公网安备
             4405070XXXXXXX</a></p>
       </div>
-      <p class="rights">© 2024 Livequeen有限公司官网 版权所有 {{ windowHeight }}{{ windowHeight }}</p>
-      
+      <p class="rights">© 2024 Livequeen有限公司官网 版权所有 {{ windowHeight }}{{ windowHeight }} </p>
+
       <div class="scrollToTop" v-if="scrollTop > windowHeight" style="display: block;">
         <div @click="scrollToTop"><i class="iconfont icon-up"></i></div>
       </div>
@@ -63,7 +63,7 @@
 <script setup>
 import animateScrollTo from 'animated-scroll-to';
 
-const scrollTop = ref(0); 
+const scrollTop = ref(0);
 const windowHeight = ref(0);
 const scrollToTop = () => {
   animateScrollTo(0)
