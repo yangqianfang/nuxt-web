@@ -24,18 +24,18 @@
     </div>
   </div>
 
-  <div class="content-wrapper" >
+  <div class="content-wrapper">
     <!-- 关于我们 -->
-    <section id="about-us" class="about-us" >
+    <section id="about-us" class="about-us">
       <h2 class="title1">关于我们</h2>
       <p class="intro">网络公司不仅仅是提供域名注册、空间租用、网站开发、网站建设与网络营销活动策划相关的企业组织。</p>
       <div class="features">
-        <div class="feature"  data-aos="fade-up" data-aos-delay="0">
+        <div class="feature" data-aos="fade-up" data-aos-delay="0">
           <i class="iconfont icon-light"></i>
           <h4 class="feature-title">品牌创意</h4>
           <p class="feature-content">为企业设计独特的并能完美呈现企业价值观的视觉</p>
         </div>
-        <div class="feature"   data-aos="fade-up" data-aos-delay="300"> 
+        <div class="feature" data-aos="fade-up" data-aos-delay="300">
           <i class="iconfont icon-chart-line"></i>
           <h4 class="feature-title">整合营销</h4>
           <p class="feature-content">通过市场进入分析、制定网络营销战略、网络营销实施</p>
@@ -62,7 +62,7 @@
         </div>
       </div>
     </section>
-     <!-- 关于我们 end-->
+    <!-- 关于我们 end-->
     <!-- 成功案例 -->
     <section id="showcases" class="showcases section-bg">
       <h2 class="title1">成功案例</h2>
@@ -92,6 +92,44 @@
       </div>
     </section>
     <!-- 成功案例 -->
+    <!-- 服务流程 -->
+    <section id="service" class="service">
+      <h2 class="title1">服务流程</h2>
+      <p class="intro">网络综合公司，提供包括网络基础服务(如域名、主机、邮箱)和网络增值服务(如网站建设和推广，网站优化)等业务</p>
+      <div class="services">
+        <div class="service-item" data-aos="fade-up" data-aos-delay="0">
+          <i class="iconfont icon-yigoutong"></i>
+          <h2 class="service-title">需求沟通</h2>
+          <p class="service-content">客户提出网站建设的基本需求，包括设计要求及功能要求</p>
+        </div>
+        <div class="service-item" data-aos="fade-up" data-aos-delay="200">
+          <i class="iconfont icon-xiangmu"></i>
+          <h2 class="service-title">项目评估</h2>
+          <p class="service-content">根据客户提出的需求进行评估，估算出相应的时间与费用</p>
+        </div>
+        <div class="service-item" data-aos="fade-up" data-aos-delay="400">
+          <i class="iconfont icon-hetongguizeguankong2"></i>
+          <h2 class="service-title">签订合同</h2>
+          <p class="service-content">合作双方确认费用、工期、合作要求的基础上，双方共同签订合同</p>
+        </div>
+        <div class="service-item" data-aos="fade-up" data-aos-delay="600">
+          <i class="iconfont icon-wenjian"></i>
+          <h2 class="service-title">提案阶段</h2>
+          <p class="service-content">完成网站初稿DEMO设计，包括首页风格，内页风格页面</p>
+        </div>
+        <div class="service-item" data-aos="fade-up" data-aos-delay="800">
+          <i class="iconfont icon-a-kaifa1"></i>
+          <h2 class="service-title">制作阶段</h2>
+          <p class="service-content">完成所有页面的设计，进行程序开发以及前后后台的页面整合</p>
+        </div>
+        <div class="service-item" data-aos="fade-up" data-aos-delay="1000">
+          <i class="iconfont icon-yanshouguanli"></i>
+          <h2 class="service-title">网站验收</h2>
+          <p class="service-content">根据合同条款进行网站验收，并签署网站验收确认单</p>
+        </div>
+      </div>
+    </section>
+    <!-- 服务流程 -->
     <!-- 团队成员 -->
     <section id="team-intro" class="team-intro section-bg">
       <h2 class="title1">团队成员</h2>
@@ -211,14 +249,14 @@
     <!-- 公司动态 -->
   </div>
 </template>
-<script setup> 
-import "animate.css"  
+<script setup>
+import "animate.css"
 import animateScrollTo from 'animated-scroll-to';
 import Glide from '@glidejs/glide'
 import { animateCSS, delay } from '~/utils'
 import banner01 from '~/assets/images/01.jpg'
 import banner02 from '~/assets/images/02.jpg'
-onMounted(() => { 
+onMounted(() => {
   var glide = new Glide('.glide').mount();
   activeClass(0);
   glide.on(['run.before'], function (e) {
@@ -229,7 +267,7 @@ onMounted(() => {
     let { index } = glide;
     console.log("after-", index)
     activeClass(index);
-  }) 
+  })
 });
 
 const removeClass = (index) => {
@@ -255,7 +293,7 @@ async function activeClass(index) {
 }
 
 // 查看更多
-function readMord(){
+function readMord() {
   animateScrollTo(document.getElementById('about-us'))
 }
 
@@ -266,6 +304,4 @@ const bannerList = reactive([
 
 ]); 
 </script>
-<style lang="less">
- 
-</style>
+<style lang="less"></style>
