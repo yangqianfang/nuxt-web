@@ -133,70 +133,78 @@
           <div class="profile-image"><img src="/assets/images/member-1.jpg" alt=""></div>
           <h4 class="name">John</h4>
           <p class="position">前端工程师</p>
-          <ul class="social-links">
+          <!-- <ul class="social-links">
             <li><a href=""><i class="fa fa-weixin"></i></a>
             </li>
             <li><a href=""><i class="fa fa-weibo"></i></a></li>
             <li><a href=""><i class="fa fa-github"></i></a>
             </li>
-          </ul>
+          </ul> -->
         </div>
         <div class="team-member">
           <div class="profile-image"><img src="/assets/images/member-2.jpg" alt=""></div>
           <h4 class="name">Sofia</h4>
           <p class="position">UI工程师</p>
-          <ul class="social-links">
+          <!-- <ul class="social-links">
             <li><a href=""><i class="fa fa-weixin"></i></a>
             </li>
             <li><a href=""><i class="fa fa-weibo"></i></a></li>
             <li><a href=""><i class="fa fa-github"></i></a>
             </li>
-          </ul>
+          </ul> -->
         </div>
         <div class="team-member">
           <div class="profile-image"><img src="/assets/images/member-3.jpg" alt=""></div>
           <h4 class="name">David</h4>
           <p class="position">后端工程师</p>
-          <ul class="social-links">
+          <!-- <ul class="social-links">
             <li><a href=""><i class="fa fa-weixin"></i></a>
             </li>
             <li><a href=""><i class="fa fa-weibo"></i></a></li>
             <li><a href=""><i class="fa fa-github"></i></a>
             </li>
-          </ul>
+          </ul> -->
         </div>
         <div class="team-member">
           <div class="profile-image"><img src="/assets/images/member-4.jpg" alt=""></div>
           <h4 class="name">Daniel</h4>
           <p class="position">项目经理</p>
-          <ul class="social-links">
+          <!-- <ul class="social-links">
             <li><a href=""><i class="fa fa-weixin"></i></a>
             </li>
             <li><a href=""><i class="fa fa-weibo"></i></a></li>
             <li><a href=""><i class="fa fa-github"></i></a>
             </li>
-          </ul>
+          </ul> -->
         </div>
       </div>
     </section>
     <!-- 团队成员 END -->
     <!-- 数据奖项-->
-    <section id="data-section" class="data-section" data-sr-id="15"
-      style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0s;">
-      <div class="data-piece"><i class="fa fa-code"></i>
-        <div class="num">15612 </div>
+
+    <section id="data-section" class="data-section">
+      <div class="data-piece"><i class="iconfont icon-code"></i>
+        <ClientOnly>
+          <CountUp class="num" :end-val="3000" :options="conuntUpOption" />
+        </ClientOnly>
         <div class="data-desc">w行代码</div>
       </div>
-      <div class="data-piece"><i class="fa fa-adjust"></i>
-        <div class="num">88 </div>
+      <div class="data-piece"><i class="iconfont icon-cup-"></i>
+        <ClientOnly>
+          <CountUp class="num" :end-val="109" :options="conuntUpOption" />
+        </ClientOnly>
         <div class="data-desc">个奖项</div>
       </div>
-      <div class="data-piece"><i class="fa fa-user"></i>
-        <div class="num">138 </div>
+      <div class="data-piece"><i class="iconfont icon-persons"></i>
+        <ClientOnly>
+          <CountUp class="num" :end-val="456" :options="conuntUpOption" />
+        </ClientOnly>
         <div class="data-desc">位客户</div>
       </div>
-      <div class="data-piece"><i class="fa fa-folder"></i>
-        <div class="num">220 </div>
+      <div class="data-piece"><i class="iconfont icon-project"></i>
+        <ClientOnly>
+          <CountUp class="num" :end-val="45" :options="conuntUpOption" />
+        </ClientOnly>
         <div class="data-desc">个项目</div>
       </div>
     </section>
@@ -251,6 +259,12 @@ import Glide from '@glidejs/glide'
 import { animateCSS, delay } from '~/utils'
 import banner01 from '~/assets/images/01.jpg'
 import banner02 from '~/assets/images/02.jpg'
+import CountUp from "vue-countup-v3";
+
+const conuntUpOption = reactive({
+  enableScrollSpy: true,//出现在可视区域展示动画
+  scrollSpyOnce: true,//只展示一次动画
+})
 onMounted(() => {
   var glide = new Glide('.glide').mount();
   activeClass(0);

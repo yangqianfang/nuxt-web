@@ -18,7 +18,7 @@ export default defineNuxtPlugin(nuxtApp => {
       easing: 'ease-out-quart', // 动画缓动函数
       offset: 120, // 触发动画的偏移量 (px)
       delay: 0, // 动画延迟 (毫秒)
-      once: false, // 动画是否只播放一次
+      once: true, // 动画是否只播放一次
       mirror: false, // 元素滚动出视窗时是否反向播放动画
       anchorPlacement: 'top-bottom' // 动画触发点位置
     });

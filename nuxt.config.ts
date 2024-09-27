@@ -15,6 +15,9 @@ export default defineNuxtConfig({
   srcDir: 'app',
   // postcss:postcssConfig,
   modules: ['@nuxt/image','nuxt-aos'],
+  build: {
+    transpile: ['vue-countup-v3'],
+  },
   router: {
     options: {
       scrollBehaviorType: 'smooth'
