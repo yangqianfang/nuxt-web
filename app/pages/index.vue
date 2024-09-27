@@ -64,36 +64,36 @@
     </section>
     <!-- 关于我们 end-->
     <!-- 成功案例 -->
-    <section id="showcases" class="showcases section-bg">
+    <section id="showcases" class="showcases section-bg" style="display: none;">
       <h2 class="title1">成功案例</h2>
       <div class="filter-btns"><button class="filter-btn active" data-filter="*">全部</button><button class="filter-btn"
           data-filter=".web">Web</button><button class="filter-btn" data-filter=".mobile">移动</button><button
           class="filter-btn" data-filter=".backend">后端</button></div>
       <div class="cases" style="position: relative; height: 614.4px;">
-        <div class="case-item mobile backend" style="position: absolute; left: 0px; top: 0px;"><img
+        <div class="case-item mobile backend"  ><img
             src="/assets/images/case-1.jpg" alt=""></div>
-        <div class="case-item mobile web" style="position: absolute; left: 379.8px; top: 0px;"><img
+        <div class="case-item mobile web"  ><img
             src="/assets/images/case-2.jpg" alt=""></div>
-        <div class="case-item mobile web" style="position: absolute; left: 759.6px; top: 0px;"><img
+        <div class="case-item mobile web" ><img
             src="/assets/images/case-3.jpg" alt=""></div>
-        <div class="case-item mobile backend" style="position: absolute; left: 1139.4px; top: 0px;">
+        <div class="case-item mobile backend"  >
           <img src="/assets/images/case-4.jpg" alt="">
         </div>
-        <div class="case-item web mobile" style="position: absolute; left: 0px; top: 307.2px;"><img
+        <div class="case-item web mobile"  ><img
             src="/assets/images/case-5.jpg" alt=""></div>
-        <div class="case-item web backend" style="position: absolute; left: 379.8px; top: 307.2px;">
+        <div class="case-item web backend"  >
           <img src="/assets/images/case-6.jpg" alt="">
         </div>
-        <div class="case-item backend web" style="position: absolute; left: 759.6px; top: 307.2px;">
+        <div class="case-item backend web"  >
           <img src="/assets/images/case-7.jpg" alt="">
         </div>
-        <div class="case-item backend mobile" style="position: absolute; left: 1139.4px; top: 307.2px;"><img
+        <div class="case-item backend mobile"  ><img
             src="/assets/images/case-8.jpg" alt=""></div>
       </div>
     </section>
     <!-- 成功案例 -->
     <!-- 服务流程 -->
-    <section id="service" class="service">
+    <section id="service" class="service"  >
       <h2 class="title1">服务流程</h2>
       <p class="intro">网络综合公司，提供包括网络基础服务(如域名、主机、邮箱)和网络增值服务(如网站建设和推广，网站优化)等业务</p>
       <div class="services">
