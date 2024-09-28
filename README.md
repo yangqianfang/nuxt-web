@@ -1,6 +1,7 @@
-# Nuxt 3  nuxt-web
+# Nuxt 3 nuxt-web
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+nodejs >18.0.0
 
 ## Setup
 
